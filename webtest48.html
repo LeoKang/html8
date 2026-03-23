@@ -13,6 +13,7 @@
         var markerIcon = new google.maps.MarkerImage("marker.jpg");
 
         function MyPos() {
+            alert("MyPos()");
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(CurPosition, ErrorCallback);
             }
@@ -24,8 +25,7 @@
             var latlng = new google.maps.LatLng(lat, lng);
             var options = {
                 zoom: 15,
-                center: latlng,
-                mapTypeId: google.maps.mapTypeId.ROADMAP
+                center: latlng
             };
             var map = new google.maps.Map(
                 document.getElementById("map"),
